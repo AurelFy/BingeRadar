@@ -1,2 +1,26 @@
 @import 'utils/variables';
 @import 'components/type';
+
+html {
+    width: 100vw;
+}
+
+body {
+    background-color: #1E1E1E;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+}
+
+h1 span {
+    background-color: orange;
+    color: #1E1E1E;
+    border-radius: 10px;
+}
+
+.search {
+    text-align: center;
+}
+
