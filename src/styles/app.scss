@@ -12,17 +12,34 @@ body {
 h1 {
     text-align: center;
     color: white;
-    font-family: "DM Sans", sans-serif ;
+    font-family: "DM Serif Display", serif;
+    font-weight: 400;
 }
 
 h1 span {
-    font-family: "DM Serif Display", serif;
     font-style: italic;
     padding-left: 5px;
-
 }
 
 .search {
     text-align: center;
 }
 
+.card {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 100px;
+}
+
+.card--item {
+    width: 300px;
+    text-align: center;
+}
+
+.card--item__img {
+    width: 200px;
+    height: 300px; 
+    object-fit: cover;
+}

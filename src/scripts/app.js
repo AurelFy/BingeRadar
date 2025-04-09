@@ -1,8 +1,8 @@
 "use strict";
 
 // Décalaration des variabls nécéssaires
-var inputText = document.querySelector('.search--input');
-var btn = document.querySelector('.search--btn');
+var form = document.querySelector('.search--form')
+var inputText = document.querySelector('.search--form__input');
 var movies = [];
 var details = []; 
  
@@ -11,7 +11,9 @@ var url = "";
 var urlDetails = ""; 
  
 // Ecoute du click 
-btn.addEventListener('click', function(){
+form.addEventListener('submit', function(e){
+    // e contient les infos de l'evenement 
+    e.preventDefault(); 
     // remplacer les " " du input par des "-"
     
     // définition de la premiere url
@@ -117,6 +119,15 @@ function fetchDetails (){
 }
 
 function displayDetails(dataId){
+
+    var movieDetails = document.querySelector('.card--item'); 
+
+    // Créer une div detail que je remplis avec chaque élément que je veux
+
+    var movieBudget = document.createElement('span')
+        movieBudget.classList.add('card--item__budget')
+        movieBudget.textContent = dataId.budget;
+        movieDetails.appendChild(movieBudget); 
 
 }
 
